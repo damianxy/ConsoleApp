@@ -1,16 +1,29 @@
-﻿var name = "Damian";
-var age = 29;
-var sex = "mezczyzna";
+﻿int number = 4566;
+string NumberAsString = number.ToString();
+char[] letters = NumberAsString.ToCharArray();
 
-if (sex == "kobieta" && age < 30)
+char[] numbers = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+
+Console.WriteLine("Wynik dla Liczby" + NumberAsString);
+
+foreach (char num in numbers)
 {
-    Console.WriteLine("Kobieta ponizej 30 lat");
+    var counter = 0;
+
+    foreach (char let in letters)
+    {
+        if (num == let)
+        {
+            counter++;
+        }
+    }
+    Console.WriteLine(num + " -->" + counter);
 }
-else if (name == "Ewa" && age == 30)
-{
-    Console.WriteLine("Ewa, lat 30");
-}
-else if (sex == "mezczyzna" && age < 18)
-{
-    Console.WriteLine("Niepelnoletni mezczyzna");
-}
+
+
+
+
+
+
+
+
